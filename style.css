@@ -21,13 +21,24 @@ h1{
 }
 #indexheader{  
     max-width: 700px;
+    margin: auto;
+}
+#indexmain{
+    padding: 8px;
+}
+#indexmain{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
 }
 .indexnav{
     background-color: rgb(184, 184, 184);
     display: flex;
-    margin: 15px auto;
+    margin: 15px 10px;
     width: 100px;
-    border: 1px solid rgb(82, 82, 82);
+    border: 1px solid rgba(0, 0, 0, 0.323);
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.356);
     text-decoration: none;
     justify-content: center;
     justify-items: center;
