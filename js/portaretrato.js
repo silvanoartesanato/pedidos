@@ -21,15 +21,15 @@ document.querySelector("#portaretratobtn").addEventListener("click", () => {
             espec = espessura(espe)
         }}
 
-        if (quant > 9) {
-            quantc = 8          // desconto a partir de 21 pecas
-        } else if (quant > 50){
-            quantc = 7          // desconto a partir de 100 pecas
-        }
+        if (quant > 50){
+            quantc = 7          // desconto a partir de 50 pecas
+        } else if (quant > 9) {
+            quantc = 8          // desconto a partir de 10 pecas
+        } 
         
         let valor1 = larg * 2 + comp * 2  * 0.05 * 25
         let valor2 = larg * comp * espec
         let valor =  quant * ((valor1 + valor2) * quantc)
-        res.innerHTML = `${quant} Porta Retrato(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${quant} Porta Retrato(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)} (R$${(valor/quant).toFixed(2)} p/ peça)`
         }
 })

@@ -21,13 +21,13 @@ document.querySelector("#placabtn").addEventListener("click", () => {
             espec = espessura(espe)
         }}
 
-        if (quant > 20) {
-            quantc = 6          // desconto a partir de 21 pecas
-        } else if (quant > 99){
+        if (quant > 99){
             quantc = 5          // desconto a partir de 100 pecas
+        } else if (quant > 20) {
+            quantc = 6          // desconto a partir de 21 pecas
         }
         
         let valor =  quant * (comp * larg * espec * quantc)
-        res.innerHTML = `${quant} Placa(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${quant} Placa(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)} ( R$${(valor/quant).toFixed(2)} p/ letra )`
         }
 })

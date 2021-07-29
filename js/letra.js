@@ -21,13 +21,13 @@ document.querySelector("#letrabtn").addEventListener("click", () => {
             espec = espessura(espe)
         }}
 
-        if (letras > 9) {
-            quantc = 8          // desconto a partir de 10 letras
-        } else if (letras > 50){
-            quantc = 7          // desconto a partir de 50 letras
-        }
+        if (letras > 50){
+            quantc = 7          // desconto a partir de 50 pecas
+        } else if (letras > 9) {
+            quantc = 8          // desconto a partir de 10 pecas
+        } 
         
         let valor =  letras * (alt * alt * espec * quantc)
-        res.innerHTML = `${palavra} (${letras} letras):<br>${alt}m de altura e ${espe}mm de espessura<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${palavra} (${letras} letras):<br>${alt}m de altura e ${espe}mm de espessura<br>R$${valor.toFixed(2)} (R$${(valor/letras).toFixed(2)} p/ letra)`
         }
 })

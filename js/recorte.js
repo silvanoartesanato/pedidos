@@ -21,13 +21,13 @@ document.querySelector("#recortebtn").addEventListener("click", () => {
             espec = espessura(espe)
         }}
 
-        if (quant > 9) {
-            quantc = 10         // desconto a partir de 21 pecas
-        } else if (quant > 50){
-            quantc = 8          // desconto a partir de 100 pecas
+        if (quant > 50){
+            quantc = 8          // desconto a partir de 51 pecas
+        } else if (quant > 9) {
+            quantc = 10         // desconto a partir de 10 pecas
         }
         
         let valor =  quant * (comp * larg * espec * quantc)
-        res.innerHTML = `${quant} Recorte(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${quant} Recorte(s): ${comp}m x ${larg}m de ${espe}mm<br>R$${valor.toFixed(2)} (R$${(valor/quant).toFixed(2)} p/ peça)`
         }
 })

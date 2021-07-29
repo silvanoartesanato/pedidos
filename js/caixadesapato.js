@@ -22,15 +22,16 @@ document.querySelector("#caixadesapatobtn").addEventListener("click", () => {
             espec = espessura(espe)
         }}
 
-        if (quant > 9) {
-            quantc = 8          // desconto a partir de 10 pecas
-        } else if (quant > 50){
+        if (quant > 50){
             quantc = 7          // desconto a partir de 50 pecas
-        }
+        } else if (quant > 9) {
+            quantc = 8          // desconto a partir de 10 pecas
+        } 
+        
         
         let valorcaixa = ((comp * 2) + (larg * 2)) * (alt + 0.02) * espec
         let valortampa = larg * comp * (espessura(3)) * 2
         let valor = quant * ((valorcaixa + valortampa) * quantc)
-        res.innerHTML = `${quant} Caixa(s) de sapato: ${comp}m x ${larg}m x ${alt}m de ${espe}mm<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${quant} Caixa(s) de sapato: ${comp}m x ${larg}m x ${alt}m de ${espe}mm<br>R$${valor.toFixed(2)} (R$${(valor/quant).toFixed(2)} p/ peça)`
         }
 })

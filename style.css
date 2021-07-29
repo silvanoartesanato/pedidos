@@ -30,7 +30,6 @@ h1{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-
 }
 .indexnav{
     background-color: rgb(184, 184, 184);

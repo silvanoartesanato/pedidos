@@ -38,13 +38,13 @@ document.querySelector("#caixacomdobradicabtn").addEventListener("click", () => 
             }
         }
 
-        if (quant > 9) {
-            quantc = 8          // desconto a partir de 10 pecas
-        } else if (quant > 50){
+        if (quant > 50){
             quantc = 7          // desconto a partir de 50 pecas
+        } else if (quant > 9) {
+            quantc = 8          // desconto a partir de 10 pecas
         }
         
         let valor = quant * (((larg * comp * alt * espec + larg * comp * 2 * espec) + fechoc) * quantc)
-        res.innerHTML = `${quant} Caixa(s) com dobradiça: ${comp}m x ${larg}m x ${alt}m de ${espe}mm<br>R$${valor.toFixed(2)}`
+        res.innerHTML = `${quant} Caixa(s) com dobradiça: ${comp}m x ${larg}m x ${alt}m de ${espe}mm<br>R$${valor.toFixed(2)} (R$${(valor/quant).toFixed(2)} p/ peça)`
         }
 })

@@ -10,6 +10,6 @@ document.querySelector("#acrilicobtn").addEventListener("click", () => {
         res.innerHTML= 'Preencha todas as entradas.'
     } else {
         let valor = quant * comp * larg * 165
-    res.innerHTML = `${quant} Placa(s) de acrílico: ${comp}m x ${larg}m<br>R$${valor.toFixed(2)}`
+    res.innerHTML = `${quant} Placa(s) de acrílico: ${comp}m x ${larg}m<br>R$${valor.toFixed(2)} (R$${(valor/quant).toFixed(2)} p/ peça)`
     }
 })
