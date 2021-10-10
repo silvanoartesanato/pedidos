@@ -10,7 +10,7 @@ document.querySelector("#caixadesapatobtn").addEventListener("click", () => {
     let espec // preço dependendo da espessura
     let espe // Espessura
     let quant = Number(document.querySelector("#quant").value) // Quantidade
-    let quantc = 10// desconto dependendo da quantidade
+    let quantc = 8// desconto dependendo da quantidade
 
     if (comp <= 0 || larg <= 0 || alt <= 0||quant <= 0){ // Alerta caso o input estiver vazio ou <= 0
         alert("Preencha todas as entradas antes de calcular, usando apenas números maiores que 0 (zero).")
@@ -23,9 +23,9 @@ document.querySelector("#caixadesapatobtn").addEventListener("click", () => {
         }}
 
         if (quant > 50){
-            quantc = 7          // desconto a partir de 50 pecas
+            quantc = 6          // desconto a partir de 50 pecas
         } else if (quant > 9) {
-            quantc = 8          // desconto a partir de 10 pecas
+            quantc = 7          // desconto a partir de 10 pecas
         } 
         
         

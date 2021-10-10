@@ -138,6 +138,12 @@ form > label::after{
 
 
 
+
+
+
+
+
+
 #placaform{
     grid-template-areas: 'comp compinput'
                         'larg larginput'
@@ -171,7 +177,9 @@ form > label::after{
 #portaretratoform{
     grid-template-areas: 'comp compinput'
                         'larg larginput'
+                        'largborda largboradainput'
                         'espe esperadio'
+                        'fundo fundoinput'
                         'quant quantinput'
                         'btn btn';
 }
