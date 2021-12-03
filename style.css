@@ -202,3 +202,12 @@ form > label::after{
                         'quant quantinput'
                         'btn btn';
 }
+
+#bandejaform{
+    grid-template-areas: 'comp compinput'
+                        'larg larginput'
+                        'alt altinput'
+                        'espe esperadio'
+                        'quant quantinput'
+                        'btn btn';
+}
